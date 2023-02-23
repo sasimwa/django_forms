@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Members</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static "css/forms.css" %}">
+</head>
+<body>
+
+<h1>Members Page</h1>
+<div class="form">
+<form action=""method="POST">
+    {% csrf_token %}
+    {{  reg_members_form.as_p }}
+
+
+
+    <input type="submit" name="members" value="Register Member" class="reg">
+
+
+
+
+
+</form>
+</div>
+{% if  submit_members == "Register Member"  %}
+{{ name }}
+{{ age }}
+{{ phone }}
+{{ city }}
+{{ country }}
+
+{% endif %}
+
+</body>
+</html>
